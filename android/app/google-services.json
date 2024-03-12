@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "285461318727",
+    "project_id": "chateo-2aaee",
+    "storage_bucket": "chateo-2aaee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285461318727:android:7e7ee3500e486616d0f562",
+        "android_client_info": {
+          "package_name": "com.example.chateo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhTMG9hJnmA_EbMzJpBPczpmrAUMgTWRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -17,6 +17,10 @@ class Assets {
   /// assets/images/moreIcon.svg
   static const String imagesMoreIcon = "assets/images/moreIcon.svg";
 
+  /// Assets for imagesPersonImage
+  /// assets/images/personImage.jfif
+  static const String imagesPersonImage = "assets/images/personImage.jfif";
+
   /// Assets for imagesSendIcon
   /// assets/images/sendIcon.svg
   static const String imagesSendIcon = "assets/images/sendIcon.svg";

@@ -18,9 +18,13 @@ class OnBoardingViewBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 45.h,),
+            SizedBox(
+              height: 45.h,
+            ),
             Image.asset(Assets.imagesIllustration),
-            SizedBox(height: 42.h,),
+            SizedBox(
+              height: 42.h,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 24.sp),
               child: Text(
@@ -29,18 +33,26 @@ class OnBoardingViewBody extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(height: 126.h,),
-            Text(AppStrings.termsPrivacyPolicy, style: Styles.mulish600Size14,),
-            SizedBox(height: 18.h,),
-            CustomTextButton(txt: AppStrings.startMessaging, onPressed: (){
-              customReplacementNavigate(context, "/EnterPhoneView");
-              onBoardingVisited();
-            },)
+            SizedBox(
+              height: 126.h,
+            ),
+            Text(
+              AppStrings.termsPrivacyPolicy,
+              style: Styles.mulish600Size14,
+            ),
+            SizedBox(
+              height: 18.h,
+            ),
+            CustomTextButton(
+              txt: AppStrings.startMessaging,
+              onPressed: () {
+                customPushReplacementNavigate(context, "/EnterPhoneView");
+                onBoardingVisited();
+              },
+            )
           ],
         ),
       ),
     );
   }
-  }
-
-
+}

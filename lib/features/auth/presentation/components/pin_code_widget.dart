@@ -20,7 +20,7 @@ class _PinCodeWidgetState extends State<PinCodeWidget> {
       showCursor: false,
       autoFocus: true,
       onCompleted: (pin) {
-        customNavigate(context, "/EnterYourProfileView");
+        customPushNavigate(context, "/EnterYourProfileView");
       },
       length: 6,
       obscureText: false,

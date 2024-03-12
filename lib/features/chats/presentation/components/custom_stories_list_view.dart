@@ -26,7 +26,7 @@ class CustomStoriesListView extends StatelessWidget {
               ? const YourStoryItem()
               : const StoreisListViewItem();
         },
-        itemCount: 10,
+        itemCount: 2,
       ),
     );
   }

@@ -50,7 +50,7 @@ class EnterPhoneViewBody extends StatelessWidget {
             CustomTextButton(
               txt: AppStrings.cContinue,
               onPressed: () {
-                customNavigate(context, "/EnterCodeView");
+                customPushNavigate(context, "/EnterCodeView");
               },
             ),
           ],

@@ -1,3 +1,4 @@
+import 'package:chateo_app/core/utils/assets.dart';
 import 'package:chateo_app/core/utils/colors.dart';
 import 'package:chateo_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,9 @@ class StoreisListViewItem extends StatelessWidget {
           height: 48.h,
           width: 48.w,
           decoration: BoxDecoration(
-              color: AppColors.lightPrimaryColor,
+              image: const DecorationImage(
+                  image: AssetImage(Assets.imagesPersonImage),
+                  fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(width: 2, color: AppColors.primaryColor)),
         ),
@@ -27,6 +30,7 @@ class StoreisListViewItem extends StatelessWidget {
           child: Text(
             "Salsabila",
             style: Styles.mulish400Size12.copyWith(fontSize: 10),
+            textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
           ),
         )

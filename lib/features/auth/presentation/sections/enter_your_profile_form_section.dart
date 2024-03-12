@@ -29,7 +29,7 @@ class EnterYourProfileFormSection extends StatelessWidget {
         CustomTextButton(
           txt: AppStrings.save,
           onPressed: () {
-            customReplacementNavigate(context, "/MainScreenView");
+            customPushReplacementNavigate(context, "/MainScreenView");
           },
         )
       ],

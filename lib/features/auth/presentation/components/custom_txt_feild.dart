@@ -9,7 +9,9 @@ class CustomTextFormField extends StatelessWidget {
     required this.labelText,
     this.onChanged,
     this.onFieldSubmitted,
-    this.obscureText, this.suffixIcon, this.keyboardType,
+    this.obscureText,
+    this.suffixIcon,
+    this.keyboardType, this.controller,
   });
   final String labelText;
   final Function(String)? onChanged;
@@ -17,6 +19,7 @@ class CustomTextFormField extends StatelessWidget {
   final bool? obscureText;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,6 +27,7 @@ class CustomTextFormField extends StatelessWidget {
       child: SizedBox(
         height: 45.h,
         child: TextFormField(
+          controller: controller,
           keyboardType: keyboardType ?? TextInputType.name,
           validator: (value) {
             if (value!.isEmpty) {
@@ -35,7 +39,6 @@ class CustomTextFormField extends StatelessWidget {
           onChanged: onChanged,
           onFieldSubmitted: onFieldSubmitted,
           obscureText: obscureText ?? false,
-          
           decoration: InputDecoration(
             fillColor: AppColors.textFeildColor,
             filled: true,
@@ -50,9 +53,10 @@ class CustomTextFormField extends StatelessWidget {
       ),
     );
   }
+
   OutlineInputBorder getBorderStyle() {
-  return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(4),
-      borderSide: const BorderSide(color: AppColors.textFeildColor));
-}
+    return OutlineInputBorder(
+        borderRadius: BorderRadius.circular(4),
+        borderSide: const BorderSide(color: AppColors.textFeildColor));
+  }
 }

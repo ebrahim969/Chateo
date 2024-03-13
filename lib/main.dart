@@ -1,9 +1,11 @@
 import 'package:chateo_app/core/cache/cache_helper.dart';
 import 'package:chateo_app/core/router/app_router.dart';
 import 'package:chateo_app/core/services/service_locator.dart';
+import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:chateo_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() async {
@@ -26,10 +28,13 @@ class Chateo extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MaterialApp.router(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(fontFamily: 'Mulish'),
-          routerConfig: routes,
+        return BlocProvider(
+          create: (context) => AuthCubit(),
+          child: MaterialApp.router(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(fontFamily: 'Mulish'),
+            routerConfig: routes,
+          ),
         );
       },
     );

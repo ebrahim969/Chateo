@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -25,7 +28,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -43,39 +49,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD6e92fc_Hd6DdZjHAF_YQ7oL5-X-kYVcA',
-    appId: '1:285461318727:web:eb3d9b506dc706b2d0f562',
-    messagingSenderId: '285461318727',
-    projectId: 'chateo-2aaee',
-    authDomain: 'chateo-2aaee.firebaseapp.com',
-    storageBucket: 'chateo-2aaee.appspot.com',
-    measurementId: 'G-PQ8RXGKYZ4',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDhTMG9hJnmA_EbMzJpBPczpmrAUMgTWRM',
-    appId: '1:285461318727:android:7e7ee3500e486616d0f562',
-    messagingSenderId: '285461318727',
-    projectId: 'chateo-2aaee',
-    storageBucket: 'chateo-2aaee.appspot.com',
+    apiKey: 'AIzaSyClsORTHaXKjNfOgzU_qgZGuPmFWi-w7hM',
+    appId: '1:1037345777614:android:b4d7ec4cf7a541c8cdad9f',
+    messagingSenderId: '1037345777614',
+    projectId: 'chat-eeb24',
+    storageBucket: 'chat-eeb24.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDMw2cANWRCjATiewJSMPA3WunRulX6Hfc',
-    appId: '1:285461318727:ios:212b9d960b66175cd0f562',
-    messagingSenderId: '285461318727',
-    projectId: 'chateo-2aaee',
-    storageBucket: 'chateo-2aaee.appspot.com',
+    apiKey: 'AIzaSyCrb_rnixe0rvFSSNXxVFvNCuTCsIBToGY',
+    appId: '1:1037345777614:ios:050dc262a037ac48cdad9f',
+    messagingSenderId: '1037345777614',
+    projectId: 'chat-eeb24',
+    storageBucket: 'chat-eeb24.appspot.com',
     iosBundleId: 'com.example.chateoApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDMw2cANWRCjATiewJSMPA3WunRulX6Hfc',
-    appId: '1:285461318727:ios:c58f5e93afd56c7bd0f562',
-    messagingSenderId: '285461318727',
-    projectId: 'chateo-2aaee',
-    storageBucket: 'chateo-2aaee.appspot.com',
-    iosBundleId: 'com.example.chateoApp.RunnerTests',
   );
 }

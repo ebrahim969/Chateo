@@ -30,21 +30,34 @@ class EnterCodeViewBody extends StatelessWidget {
             SizedBox(
               height: 48.h,
             ),
-            const PinCodeWidget(),
-            SizedBox(
-              height: 77.h,
-            ),
-            Center(
-              child: TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    AppStrings.resendCode,
-                    style: Styles.mulish600Size16,
-                  )),
-            )
+            const PinCodeForm(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class PinCodeForm extends StatelessWidget {
+  const PinCodeForm({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const PinCodeWidget(),
+        SizedBox(
+          height: 77.h,
+        ),
+        Center(
+          child: TextButton(
+              onPressed: () {},
+              child: Text(
+                AppStrings.resendCode,
+                style: Styles.mulish600Size16,
+              )),
+        )
+      ],
     );
   }
 }

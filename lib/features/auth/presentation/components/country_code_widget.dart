@@ -7,7 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CountryCodeWidget extends StatefulWidget {
   const CountryCodeWidget({
-    super.key, required this.cubit,
+    super.key,
+    required this.cubit,
   });
   final AuthCubit cubit;
   @override
@@ -28,6 +29,8 @@ class _CountryCodeWidgetState extends State<CountryCodeWidget> {
           onChanged: (country) {
             setState(() {
               widget.cubit.countryCode = country;
+              print(
+                  "/////////////${widget.cubit.countryCode}///////////");
             });
           },
           initialSelection: 'IT',

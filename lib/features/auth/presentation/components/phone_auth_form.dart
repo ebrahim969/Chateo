@@ -38,7 +38,9 @@ class PhoneAuthForm extends StatelessWidget {
                   Expanded(
                       flex: 3,
                       child: CustomTextFormField(
-                        controller: cubit.phoneController,
+                        onChanged: (phoneNumber) {
+                          cubit.phoneNumber = phoneNumber;
+                        },
                         labelText: AppStrings.phoneNumber,
                         keyboardType: TextInputType.phone,
                       ))
@@ -53,7 +55,7 @@ class PhoneAuthForm extends StatelessWidget {
                       txt: AppStrings.cContinue,
                       onPressed: () {
                         if (cubit.phoneFormKey.currentState!.validate()) {
-                          cubit.signInWithPhoneNumber();
+                          cubit.sendCodeWithPhoneNumber();
                         }
                       },
                     ),

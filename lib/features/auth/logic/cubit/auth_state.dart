@@ -14,3 +14,13 @@ final class PhoneAuthFailure extends AuthState {
 
   PhoneAuthFailure({required this.errmessage});
 }
+
+final class SmsAuthLoading extends AuthState {}
+
+final class SmsAuthSuccess extends AuthState {}
+
+final class SmsAuthFailure extends AuthState {
+  final String errmessage;
+
+  SmsAuthFailure({required this.errmessage});
+}

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "285461318727",
-    "project_id": "chateo-2aaee",
-    "storage_bucket": "chateo-2aaee.appspot.com"
+    "project_number": "1037345777614",
+    "project_id": "chat-eeb24",
+    "storage_bucket": "chat-eeb24.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:285461318727:android:7e7ee3500e486616d0f562",
+        "mobilesdk_app_id": "1:1037345777614:android:b4d7ec4cf7a541c8cdad9f",
         "android_client_info": {
           "package_name": "com.example.chateo_app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDhTMG9hJnmA_EbMzJpBPczpmrAUMgTWRM"
+          "current_key": "AIzaSyClsORTHaXKjNfOgzU_qgZGuPmFWi-w7hM"
         }
       ],
       "services": {

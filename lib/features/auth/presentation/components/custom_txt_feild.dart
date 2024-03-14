@@ -11,7 +11,8 @@ class CustomTextFormField extends StatelessWidget {
     this.onFieldSubmitted,
     this.obscureText,
     this.suffixIcon,
-    this.keyboardType, this.controller,
+    this.keyboardType,
+    this.controller, this.validator,
   });
   final String labelText;
   final Function(String)? onChanged;
@@ -20,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final TextEditingController? controller;
+  final String? Function(String?)? validator;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,7 +31,7 @@ class CustomTextFormField extends StatelessWidget {
         child: TextFormField(
           controller: controller,
           keyboardType: keyboardType ?? TextInputType.name,
-          validator: (value) {
+          validator: validator?? (value) {
             if (value!.isEmpty) {
               return "This field is required";
             } else {

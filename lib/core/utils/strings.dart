@@ -14,7 +14,7 @@ class AppStrings {
       resendCode = "Resend Code",
       yourProfile = "Your Profile",
       firstNameRequired = "First Name (Required)",
-      lastNameOptional = "First Name (Optional)",
+      lastNameOptional = "Last Name (Optional)",
       save = "Save",
       contacts = "Contacts",
       search = "Search",

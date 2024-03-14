@@ -1,6 +1,7 @@
+// ignore_for_file: unnecessary_import, depend_on_referenced_packages
+
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,7 +9,6 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:meta/meta.dart';
-
 part 'profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {
@@ -46,11 +46,15 @@ class ProfileCubit extends Cubit<ProfileState> {
       Map<String, dynamic> saveData = {
         'frist_name': fristNameController.text,
         'last_name': lastNameController.text,
+        'phone_number': FirebaseAuth.instance.currentUser!.phoneNumber,
         'id': FirebaseAuth.instance.currentUser!.phoneNumber,
         'profile_pic': profilePic,
       };
 
-      FirebaseFirestore.instance.collection("profile").add(saveData);
+      FirebaseFirestore.instance
+          .collection("profile")
+          .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
+          .set(saveData);
       emit(ProfileSuccess());
     } catch (e) {
       emit(ProfileFailure(errMessage: e.toString()));

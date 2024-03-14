@@ -2,7 +2,6 @@ import 'package:chateo_app/core/cache/cache_helper.dart';
 import 'package:chateo_app/core/functions/navigation.dart';
 import 'package:chateo_app/core/services/service_locator.dart';
 import 'package:chateo_app/core/utils/colors.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

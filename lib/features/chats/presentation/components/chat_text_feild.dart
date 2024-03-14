@@ -1,20 +1,21 @@
 import 'package:chateo_app/core/utils/colors.dart';
 import 'package:chateo_app/core/utils/styles.dart';
+import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../logic/cubit/chat_cubit.dart';
 
 class ChatTextField extends StatelessWidget {
   const ChatTextField({
     super.key,
     required this.messegeController,
-    required this.email,
     required this.listController,
   });
 
   final TextEditingController messegeController;
-  final String email;
   final ScrollController listController;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -52,12 +53,12 @@ class ChatTextField extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              // BlocProvider.of<ChatCubit>(context)
-              //     .sendMessege(messege: messegeController.text, email: email);
-              // messegeController.clear();
-              // listController.animateTo(0,
-              //     duration: const Duration(microseconds: 500),
-              //     curve: Curves.decelerate);
+              BlocProvider.of<ChatCubit>(context).sendMessege(
+                  messege: messegeController.text);
+              messegeController.clear();
+              listController.animateTo(0,
+                  duration: const Duration(microseconds: 500),
+                  curve: Curves.decelerate);
             },
             icon: const Icon(
               Icons.send,

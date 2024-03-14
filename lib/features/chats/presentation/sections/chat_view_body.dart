@@ -1,10 +1,14 @@
+import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
+import 'package:chateo_app/features/chats/logic/cubit/chat_cubit.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_bubble.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ChatViewBody extends StatelessWidget {
-  ChatViewBody({super.key});
-
+  ChatViewBody({
+    super.key,
+  });
   final listController = ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -12,18 +16,29 @@ class ChatViewBody extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          child: ListView.builder(
-            controller: listController,
-            reverse: true,
-            itemCount: 6,
-            itemBuilder: (context, index) {
-              return index % 2 == 0 ? const ChatBubble() : const ChatBubble2();
+          child: BlocBuilder<ChatCubit, ChatState>(
+            builder: (context, state) {
+              var messageList = BlocProvider.of<ChatCubit>(context).messageList;
+              AuthCubit cubit = context.read<AuthCubit>();
+              return ListView.builder(
+                controller: listController,
+                reverse: true,
+                itemCount: messageList.length,
+                itemBuilder: (context, index) {
+                  return messageList[index].id == cubit.phoneNumber
+                      ? ChatBubble(
+                          messageModel: messageList[index],
+                        )
+                      : ChatBubble2(
+                          messageModel: messageList[index],
+                        );
+                },
+              );
             },
           ),
         ),
         ChatTextField(
             messegeController: controller,
-            email: "email",
             listController: listController)
       ],
     );

@@ -30,5 +30,7 @@ class AppStrings {
       privacy = "Privacy",
       dataUsage = "Data Usage",
       help = "Help",
-      inviteYourFriends = "Invite Your Friends";
+      inviteYourFriends = "Invite Your Friends",
+      kMessagesCollection = "messages",
+      kUsersCollection = "users";
 }

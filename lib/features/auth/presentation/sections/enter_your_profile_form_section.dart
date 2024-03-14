@@ -17,6 +17,7 @@ class EnterYourProfileFormSection extends StatelessWidget {
     return BlocConsumer<ProfileCubit, ProfileState>(
       listener: (context, state) {
         if (state is ProfileSuccess) {
+          
           customPushReplacementNavigate(context, "/MainScreenView");
         } else if (state is ProfileFailure) {
           showToast(state.errMessage);
@@ -43,7 +44,7 @@ class EnterYourProfileFormSection extends StatelessWidget {
                 height: 12.h,
               ),
               CustomTextFormField(
-                validator: (value) {},
+                validator: (value)=> null,
                 labelText: AppStrings.lastNameOptional,
                 onChanged: (lastName) {
                   cubit.lastNameController.text = lastName;

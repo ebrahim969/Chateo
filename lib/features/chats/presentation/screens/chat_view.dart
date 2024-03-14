@@ -5,8 +5,9 @@ import 'package:chateo_app/features/chats/presentation/sections/chat_view_body.d
 import 'package:flutter/material.dart';
 
 class ChatView extends StatelessWidget {
-  const ChatView({super.key});
-
+  const ChatView({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -14,7 +15,7 @@ class ChatView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.backGroundWhiteColor,
         title: Text(
-          "Ebrahim",
+          "Chat",
           style: Styles.mulish600Size18,
         ),
         leading: IconButton(

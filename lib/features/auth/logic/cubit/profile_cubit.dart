@@ -3,6 +3,7 @@
 import 'dart:developer';
 import 'dart:io';
 import 'package:bloc/bloc.dart';
+import 'package:chateo_app/core/utils/strings.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -52,7 +53,7 @@ class ProfileCubit extends Cubit<ProfileState> {
       };
 
       FirebaseFirestore.instance
-          .collection("profile")
+          .collection(AppStrings.kUsersCollection)
           .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
           .set(saveData);
       emit(ProfileSuccess());

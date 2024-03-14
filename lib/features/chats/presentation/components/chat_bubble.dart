@@ -1,13 +1,16 @@
 import 'package:chateo_app/core/utils/colors.dart';
 import 'package:chateo_app/core/utils/styles.dart';
+import 'package:chateo_app/features/chats/data/model/message_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ChatBubble extends StatelessWidget {
   const ChatBubble({
     super.key,
+    required this.messageModel,
   });
 
+  final MessageModel messageModel;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -25,13 +28,13 @@ class ChatBubble extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("kljjnnm n mn ",
+              Text(messageModel.message,
                   style: Styles.mulish400Size12.copyWith(fontSize: 14)),
               SizedBox(
                 height: 5.h,
               ),
               Text(
-                "09:45",
+                messageModel.messageTime,
                 style: Styles.mulish400Size12
                     .copyWith(color: AppColors.textGreyColor, fontSize: 10),
               )
@@ -44,7 +47,10 @@ class ChatBubble extends StatelessWidget {
 class ChatBubble2 extends StatelessWidget {
   const ChatBubble2({
     super.key,
+    required this.messageModel,
   });
+
+  final MessageModel messageModel;
 
   @override
   Widget build(BuildContext context) {
@@ -60,14 +66,14 @@ class ChatBubble2 extends StatelessWidget {
                 topRight: Radius.circular(16),
                 bottomLeft: Radius.circular(16))),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text("Okay ya Brooooooooooo",
+          Text(messageModel.message,
               style: Styles.mulish400Size12.copyWith(
                   fontSize: 14, color: AppColors.backGroundWhiteColor)),
           SizedBox(
             height: 5.h,
           ),
           Text(
-            "10:00",
+            messageModel.messageTime,
             style: Styles.mulish400Size12
                 .copyWith(color: AppColors.textGreyColor, fontSize: 10),
           ),

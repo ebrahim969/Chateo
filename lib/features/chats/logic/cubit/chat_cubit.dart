@@ -1,4 +1,4 @@
-// ignore_for_file: depend_on_referenced_packages
+// ignore_for_file: depend_on_referenced_packages, unused_catch_clause, empty_catches
 
 import 'package:bloc/bloc.dart';
 import 'package:chateo_app/core/utils/strings.dart';
@@ -11,7 +11,6 @@ part 'chat_state.dart';
 
 class ChatCubit extends Cubit<ChatState> {
   ChatCubit() : super(ChatInitial());
-  String? phoneNumber;
   CollectionReference messeges =
       FirebaseFirestore.instance.collection(AppStrings.kMessagesCollection);
   List<MessageModel> messageList = [];
@@ -19,12 +18,11 @@ class ChatCubit extends Cubit<ChatState> {
     try {
       messeges.add({
         'message': messege,
-        'message_time': "${DateTime.now().hour}:${DateTime.now().second}",
+        'message_time': "${DateTime.now().hour}:${DateTime.now().minute}",
         'createdAt': DateTime.now(),
         'id': FirebaseAuth.instance.currentUser!.phoneNumber,
       });
     } on Exception catch (e) {
-      emit(ChatFailure(errMessage: e.toString()));
     }
   }
 

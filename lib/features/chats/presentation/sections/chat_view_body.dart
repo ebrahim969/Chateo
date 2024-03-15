@@ -24,11 +24,12 @@ class ChatViewBody extends StatelessWidget {
                 reverse: true,
                 itemCount: messageList.length,
                 itemBuilder: (context, index) {
-                  return messageList[index].id == FirebaseAuth.instance.currentUser!.phoneNumber
-                      ? ChatBubble(
+                  return messageList[index].id ==
+                          FirebaseAuth.instance.currentUser!.phoneNumber
+                      ? ChatBubble2(
                           messageModel: messageList[index],
                         )
-                      : ChatBubble2(
+                      : ChatBubble(
                           messageModel: messageList[index],
                         );
                 },
@@ -37,8 +38,7 @@ class ChatViewBody extends StatelessWidget {
           ),
         ),
         ChatTextField(
-            messegeController: controller,
-            listController: listController)
+            messegeController: controller, listController: listController)
       ],
     );
   }

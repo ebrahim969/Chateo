@@ -14,3 +14,13 @@ final class MoreFailure extends MoreState {
 
   MoreFailure({required this.errMesage});
 }
+
+final class SignOutLoading extends MoreState {}
+
+final class SignOutSuccess extends MoreState {}
+
+final class SignOutFailure extends MoreState {
+  final String errMesage;
+
+  SignOutFailure({required this.errMesage});
+}

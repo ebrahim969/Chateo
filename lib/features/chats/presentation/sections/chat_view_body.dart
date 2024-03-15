@@ -2,6 +2,7 @@ import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:chateo_app/features/chats/logic/cubit/chat_cubit.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_bubble.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_text_feild.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,13 +20,12 @@ class ChatViewBody extends StatelessWidget {
           child: BlocBuilder<ChatCubit, ChatState>(
             builder: (context, state) {
               var messageList = BlocProvider.of<ChatCubit>(context).messageList;
-              AuthCubit cubit = context.read<AuthCubit>();
               return ListView.builder(
                 controller: listController,
                 reverse: true,
                 itemCount: messageList.length,
                 itemBuilder: (context, index) {
-                  return messageList[index].id == cubit.phoneNumber
+                  return messageList[index].id == FirebaseAuth.instance.currentUser!.phoneNumber
                       ? ChatBubble(
                           messageModel: messageList[index],
                         )

@@ -2,9 +2,6 @@ import 'package:chateo_app/core/cache/cache_helper.dart';
 import 'package:chateo_app/core/router/app_router.dart';
 import 'package:chateo_app/core/services/service_locator.dart';
 import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
-import 'package:chateo_app/features/auth/logic/cubit/profile_cubit.dart';
-import 'package:chateo_app/features/chats/logic/cubit/chat_cubit.dart';
-import 'package:chateo_app/features/contacts/logic/contacts/contacts_cubit.dart';
 import 'package:chateo_app/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -31,15 +28,8 @@ class Chateo extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (_, child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) => AuthCubit(),
-            ),
-            BlocProvider(create: (context) => ProfileCubit()),
-            BlocProvider(create: (context) => ChatCubit()..getMessege()),
-            BlocProvider(create: (context) => ContactsCubit()..getUserContacts())
-          ],
+        return BlocProvider(
+          create: (context) => AuthCubit(),
           child: MaterialApp.router(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(fontFamily: 'Mulish'),

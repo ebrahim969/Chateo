@@ -3,9 +3,12 @@ import 'package:chateo_app/core/utils/colors.dart';
 import 'package:chateo_app/core/utils/strings.dart';
 import 'package:chateo_app/core/utils/styles.dart';
 import 'package:chateo_app/features/chats/presentation/screens/chat_listview.dart.dart';
+import 'package:chateo_app/features/contacts/logic/contacts/contacts_cubit.dart';
 import 'package:chateo_app/features/contacts/presentation/screens/contacts_view.dart';
+import 'package:chateo_app/features/more/logic/cubit/more_cubit.dart';
 import 'package:chateo_app/features/more/presentation/screens/more_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
@@ -30,9 +33,18 @@ class MainScreenView extends StatelessWidget {
 
 List<Widget> _buildScreens() {
   return [
-    const ContactsView(),
-    const ChatListView(),
-    const MoreView(),
+    BlocProvider(
+      create: (context) => ContactsCubit()..getUserContacts(),
+      child: const ContactsView(),
+    ),
+    BlocProvider(
+      create: (context) => ContactsCubit()..getUserContacts(),
+      child: const ChatListView(),
+    ),
+    BlocProvider(
+      create: (context) => MoreCubit()..getCurrentUserData(),
+      child: const MoreView(),
+    ),
   ];
 }
 

@@ -18,7 +18,7 @@ class LiftSideOfItem extends StatelessWidget {
               color: AppColors.primaryColor,
               borderRadius: BorderRadius.circular(16),
               image: const DecorationImage(
-                  image: AssetImage(Assets.imagesIllustration),
+                  image: AssetImage(Assets.imagesChateoLogo),
                   fit: BoxFit.fill)),
         ),
         SizedBox(

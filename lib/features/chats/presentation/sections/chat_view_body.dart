@@ -1,4 +1,3 @@
-import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:chateo_app/features/chats/logic/cubit/chat_cubit.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_bubble.dart';
 import 'package:chateo_app/features/chats/presentation/components/chat_text_feild.dart';

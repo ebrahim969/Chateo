@@ -17,26 +17,21 @@ class ContactsViewBody extends StatelessWidget {
               height: 16.h,
             ),
           ),
-          //Search Bar
           const SliverToBoxAdapter(
             child: CustomSearchBar(),
           ),
-
-          //Contacts List
-
           SliverToBoxAdapter(
             child: SizedBox(
-              height: 16.h,
+              height: 24.h,
             ),
           ),
-
           const SliverToBoxAdapter(
-            child: CustomContactsListView(thisChatsView: false,),
+            child: CustomContactsListView(
+              thisChatsView: false,
+            ),
           )
         ],
       ),
     );
   }
 }
-
-

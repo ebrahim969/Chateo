@@ -1,9 +1,12 @@
 import 'package:chateo_app/core/cache/cache_helper.dart';
 import 'package:chateo_app/core/functions/navigation.dart';
 import 'package:chateo_app/core/services/service_locator.dart';
+import 'package:chateo_app/core/utils/assets.dart';
 import 'package:chateo_app/core/utils/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -15,27 +18,27 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    bool onBardingVisted = getIt<CacheHelper>().getData(key: "OnBoardingVisited")?? false;
-    if(onBardingVisted == true)
-    {
-      if(FirebaseAuth.instance.currentUser != null)
-      {
+    bool onBardingVisted =
+        getIt<CacheHelper>().getData(key: "OnBoardingVisited") ?? false;
+    if (onBardingVisted == true) {
+      if (FirebaseAuth.instance.currentUser != null) {
         delayedNavigate(context, "/MainScreenView");
-      }else
-      {
+      } else {
         delayedNavigate(context, "/EnterPhoneView");
       }
-    }else
-    {
+    } else {
       delayedNavigate(context, "/OnBoardingView");
-      
     }
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: AppColors.primaryColor,
+    return Scaffold(
+      backgroundColor: AppColors.lightPrimaryColor,
+      body: Center(
+        child: SvgPicture.asset(Assets.imagesSplash, height: 200.h,),
+      ),
     );
   }
 }

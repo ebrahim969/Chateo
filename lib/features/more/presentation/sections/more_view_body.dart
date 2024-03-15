@@ -1,3 +1,4 @@
+import 'package:chateo_app/features/more/data/model/more_items_model.dart';
 import 'package:chateo_app/features/more/presentation/components/header_more_view.dart';
 import 'package:chateo_app/features/more/presentation/components/more_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -23,10 +24,11 @@ class MoreViewBody extends StatelessWidget {
             SizedBox(
               height: MediaQuery.sizeOf(context).height,
               child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return const MoreListViewItem();
+                  return MoreListViewItem(model:moreData[index],);
                 },
-                itemCount: 7,
+                itemCount: moreData.length,
               ),
             )
           ],

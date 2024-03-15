@@ -1,5 +1,7 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
-import 'package:chateo_app/features/more/data/user_model.dart';
+import 'package:chateo_app/features/more/data/model/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages, unnecessary_import
+
 import 'package:bloc/bloc.dart';
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
@@ -26,7 +28,6 @@ class AuthCubit extends Cubit<AuthState> {
         } else if (e.code == 'phone-number-already-exists') {
           emit(PhoneAuthFailure(errmessage: e.code));
         } else {
-          print("/////////////////$e//////////////////");
           emit(PhoneAuthFailure(errmessage: e.toString()));
         }
       },

@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
 import 'package:chateo_app/core/utils/strings.dart';
 import 'package:chateo_app/features/chats/data/model/message_model.dart';

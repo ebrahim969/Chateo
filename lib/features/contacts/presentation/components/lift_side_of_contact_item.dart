@@ -28,12 +28,12 @@ class LiftSideOfItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Athalia Putri",
+              "Chateo Groub",
               style: Styles.mulish600Size14
                   .copyWith(color: AppColors.textBlackColor),
             ),
             Text(
-              "Last seen yesterday",
+              "Last seen recently",
               style: Styles.mulish400Size12
                   .copyWith(color: AppColors.textGreyColor),
             )

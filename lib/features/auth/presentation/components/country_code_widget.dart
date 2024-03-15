@@ -29,8 +29,6 @@ class _CountryCodeWidgetState extends State<CountryCodeWidget> {
           onChanged: (country) {
             setState(() {
               widget.cubit.countryCode = country;
-              print(
-                  "/////////////${widget.cubit.countryCode}///////////");
             });
           },
           initialSelection: 'IT',

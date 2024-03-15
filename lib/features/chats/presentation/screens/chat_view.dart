@@ -15,7 +15,7 @@ class ChatView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.backGroundWhiteColor,
         title: Text(
-          "Chat",
+          "Chateo Group",
           style: Styles.mulish600Size18,
         ),
         leading: IconButton(

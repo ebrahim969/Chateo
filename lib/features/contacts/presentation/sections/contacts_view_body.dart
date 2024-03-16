@@ -12,11 +12,6 @@ class ContactsViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24.0),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 16.h,
-            ),
-          ),
           const SliverToBoxAdapter(
             child: CustomSearchBar(),
           ),

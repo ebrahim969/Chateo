@@ -11,6 +11,7 @@ class ContactsView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        toolbarHeight: 100,
         title: Text(
           AppStrings.contacts,
           style: Styles.mulish600Size18,

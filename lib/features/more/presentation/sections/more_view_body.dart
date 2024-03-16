@@ -14,9 +14,6 @@ class MoreViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: 16.h,
-            ),
             const HeaderMoreView(),
             SizedBox(
               height: 16.h,
@@ -26,7 +23,9 @@ class MoreViewBody extends StatelessWidget {
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return MoreListViewItem(model:moreData[index],);
+                  return MoreListViewItem(
+                    model: moreData[index],
+                  );
                 },
                 itemCount: moreData.length,
               ),
@@ -37,6 +36,3 @@ class MoreViewBody extends StatelessWidget {
     );
   }
 }
-
-
-

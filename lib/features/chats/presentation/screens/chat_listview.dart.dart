@@ -10,13 +10,20 @@ class ChatListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 100,
         title: Text(
           AppStrings.chats,
           style: Styles.mulish600Size18,
         ),
         actions: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.mark_chat_unread_outlined),),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.sort),)
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.mark_chat_unread_outlined),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.sort),
+          )
         ],
       ),
       body: const ChatListViewBody(),

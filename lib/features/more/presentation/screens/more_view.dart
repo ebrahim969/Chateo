@@ -17,6 +17,7 @@ class MoreView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        toolbarHeight: 100,
         title: Text(
           AppStrings.more,
           style: Styles.mulish600Size18,
@@ -39,11 +40,17 @@ class MoreView extends StatelessWidget {
                   : IconButton(
                       onPressed: () {
                         QuickAlert.show(
+                          showCancelBtn: true,
                           context: context,
                           type: QuickAlertType.warning,
                           text: 'You make sure to delete your account?',
+                          confirmBtnText: 'Sign out',
+                          cancelBtnText: 'Delete account',
                           onConfirmBtnTap: () {
-                            cubit.signOutUser();
+                            cubit.deleteUser();
+                          },
+                          onCancelBtnTap: () {
+                            cubit.signOut();
                           },
                         );
                       },

@@ -29,30 +29,29 @@ class MoreCubit extends Cubit<MoreState> {
     }
   }
 
-  Future<void> signOutUser() async {
+  Future<void> deleteUser() async {
     try {
       emit(SignOutLoading());
-      await deleteUserInfoFromDb();
-      await deleteUser();
-      await signOut();
-      emit(SignOutSuccess());
+      await FirebaseFirestore.instance
+        .collection(AppStrings.kUsersCollection)
+        .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
+        .delete();
+        await FirebaseAuth.instance.currentUser!.delete();
+        await FirebaseAuth.instance.signOut();
+        emit(SignOutSuccess());
     } catch (e) {
       emit(SignOutFailure(errMesage: e.toString()));
     }
   }
 
-  Future<void> deleteUserInfoFromDb() async {
-    await FirebaseFirestore.instance
-        .collection(AppStrings.kUsersCollection)
-        .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
-        .delete();
-  }
-
-  Future<void> deleteUser() async {
-    await FirebaseAuth.instance.currentUser!.delete();
-  }
-
   Future<void> signOut() async {
-    await FirebaseAuth.instance.signOut();
+    try {
+      emit(SignOutLoading());
+      await FirebaseAuth.instance.signOut();
+      await FirebaseAuth.instance.currentUser!.delete();
+      emit(SignOutSuccess());
+    } catch (e) {
+      emit(SignOutFailure(errMesage: e.hashCode.toString()));
+    }
   }
 }

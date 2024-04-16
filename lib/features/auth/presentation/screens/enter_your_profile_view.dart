@@ -1,5 +1,5 @@
-import 'package:chateo_app/features/auth/logic/cubit/profile_cubit.dart';
-import 'package:chateo_app/features/auth/presentation/sections/enter_your_profile_view_body.dart';
+import 'package:Chateo/features/auth/logic/cubit/profile_cubit.dart';
+import 'package:Chateo/features/auth/presentation/sections/enter_your_profile_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

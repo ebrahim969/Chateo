@@ -1,7 +1,7 @@
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/utils/colors.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/contacts/presentation/components/lift_side_of_contact_item.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/utils/colors.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/contacts/presentation/components/lift_side_of_contact_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

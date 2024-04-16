@@ -1,6 +1,6 @@
-import 'package:chateo_app/core/utils/colors.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/more/data/model/more_items_model.dart';
+import 'package:Chateo/core/utils/colors.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/more/data/model/more_items_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

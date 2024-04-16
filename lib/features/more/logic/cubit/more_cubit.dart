@@ -1,8 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:bloc/bloc.dart';
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/features/more/data/model/user_model.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/features/more/data/model/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';
@@ -33,12 +33,12 @@ class MoreCubit extends Cubit<MoreState> {
     try {
       emit(SignOutLoading());
       await FirebaseFirestore.instance
-        .collection(AppStrings.kUsersCollection)
-        .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
-        .delete();
-        await FirebaseAuth.instance.currentUser!.delete();
-        await FirebaseAuth.instance.signOut();
-        emit(SignOutSuccess());
+          .collection(AppStrings.kUsersCollection)
+          .doc(FirebaseAuth.instance.currentUser!.phoneNumber)
+          .delete();
+      await FirebaseAuth.instance.currentUser!.delete();
+      await FirebaseAuth.instance.signOut();
+      emit(SignOutSuccess());
     } catch (e) {
       emit(SignOutFailure(errMesage: e.toString()));
     }
@@ -48,10 +48,9 @@ class MoreCubit extends Cubit<MoreState> {
     try {
       emit(SignOutLoading());
       await FirebaseAuth.instance.signOut();
-      await FirebaseAuth.instance.currentUser!.delete();
       emit(SignOutSuccess());
     } catch (e) {
-      emit(SignOutFailure(errMesage: e.hashCode.toString()));
+      emit(SignOutFailure(errMesage: e.toString()));
     }
   }
 }

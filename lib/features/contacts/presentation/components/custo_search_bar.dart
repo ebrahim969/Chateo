@@ -1,5 +1,5 @@
-import 'package:chateo_app/core/utils/colors.dart';
-import 'package:chateo_app/core/utils/strings.dart';
+import 'package:Chateo/core/utils/colors.dart';
+import 'package:Chateo/core/utils/strings.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchBar extends StatelessWidget {

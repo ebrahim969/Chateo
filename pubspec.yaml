@@ -1,4 +1,4 @@
-name: chateo_app
+name: Chateo
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -33,12 +33,15 @@ dependencies:
   country_code_picker: ^3.0.0
   country_picker: ^2.0.25
   cupertino_icons: ^1.0.6
+  fancy_shimmer_image: ^2.0.3
   firebase_auth: ^4.17.9
   firebase_core: ^2.25.5
   firebase_storage: ^11.6.10
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.4
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
   flutter_screenutil: ^5.9.0
   flutter_svg: ^2.0.10+1
   fluttertoast: ^8.2.4
@@ -55,6 +58,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/chateo_logo.jpg"
+  min_sdk_android: 21
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
@@ -86,3 +94,8 @@ flutter_assets:
   output_path: lib/core/utils/
   filename: assets.dart
   field_prefix: null
+
+flutter_native_splash:
+  color: "#D2D5F9"
+  android_12:
+    color: "#D2D5F9"

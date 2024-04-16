@@ -1,5 +1,5 @@
-import 'package:chateo_app/features/chats/presentation/components/stories_list_view_item.dart';
-import 'package:chateo_app/features/chats/presentation/components/your_story_item.dart';
+import 'package:Chateo/features/chats/presentation/components/stories_list_view_item.dart';
+import 'package:Chateo/features/chats/presentation/components/your_story_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

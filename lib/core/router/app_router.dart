@@ -1,11 +1,11 @@
-import 'package:chateo_app/features/auth/presentation/screens/enter_code_view.dart';
-import 'package:chateo_app/features/auth/presentation/screens/enter_phone_view.dart';
-import 'package:chateo_app/features/auth/presentation/screens/enter_your_profile_view.dart';
-import 'package:chateo_app/features/chats/logic/cubit/chat_cubit.dart';
-import 'package:chateo_app/features/chats/presentation/screens/chat_view.dart';
-import 'package:chateo_app/features/on_boarding/presentation/screens/on_boarding_view.dart';
-import 'package:chateo_app/features/splash/splash_view.dart';
-import 'package:chateo_app/main_screen.dart';
+import 'package:Chateo/features/auth/presentation/screens/enter_code_view.dart';
+import 'package:Chateo/features/auth/presentation/screens/enter_phone_view.dart';
+import 'package:Chateo/features/auth/presentation/screens/enter_your_profile_view.dart';
+import 'package:Chateo/features/chats/logic/cubit/chat_cubit.dart';
+import 'package:Chateo/features/chats/presentation/screens/chat_view.dart';
+import 'package:Chateo/features/on_boarding/presentation/screens/on_boarding_view.dart';
+import 'package:Chateo/features/splash/splash_view.dart';
+import 'package:Chateo/main_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

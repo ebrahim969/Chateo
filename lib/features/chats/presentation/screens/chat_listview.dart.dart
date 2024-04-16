@@ -1,6 +1,6 @@
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/chats/presentation/sections/chats_listview_body.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/chats/presentation/sections/chats_listview_body.dart';
 import 'package:flutter/material.dart';
 
 class ChatListView extends StatelessWidget {

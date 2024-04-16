@@ -1,4 +1,4 @@
-import 'package:chateo_app/features/auth/presentation/sections/enter_code_view_body.dart';
+import 'package:Chateo/features/auth/presentation/sections/enter_code_view_body.dart';
 import 'package:flutter/material.dart';
 
 class EnterCodeView extends StatelessWidget {

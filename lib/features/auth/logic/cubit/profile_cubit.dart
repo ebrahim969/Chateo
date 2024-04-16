@@ -3,7 +3,7 @@
 import 'dart:developer';
 import 'dart:io';
 import 'package:bloc/bloc.dart';
-import 'package:chateo_app/core/utils/strings.dart';
+import 'package:Chateo/core/utils/strings.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -20,7 +20,6 @@ class ProfileCubit extends Cubit<ProfileState> {
   String profilePic = "";
   Reference referenceRoot = FirebaseStorage.instance.ref();
   GlobalKey<FormState> formKey = GlobalKey();
-
   Future<void> uploadProfilePicToStorage() async {
     ImagePicker imagePicker = ImagePicker();
     XFile? file = await imagePicker.pickImage(source: ImageSource.gallery);

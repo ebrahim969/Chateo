@@ -1,6 +1,6 @@
-import 'package:chateo_app/core/utils/assets.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/contacts/presentation/components/custom_contact_list_item.dart';
+import 'package:Chateo/core/utils/assets.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/contacts/presentation/components/custom_contact_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

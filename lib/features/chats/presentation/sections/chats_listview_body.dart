@@ -1,5 +1,5 @@
-import 'package:chateo_app/features/chats/presentation/sections/chats_header_section.dart';
-import 'package:chateo_app/features/contacts/presentation/components/custom_contacts_list_view.dart';
+import 'package:Chateo/features/chats/presentation/sections/chats_header_section.dart';
+import 'package:Chateo/features/contacts/presentation/components/custom_contacts_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,5 +1,5 @@
-import 'package:chateo_app/core/utils/assets.dart';
-import 'package:chateo_app/core/utils/strings.dart';
+import 'package:Chateo/core/utils/assets.dart';
+import 'package:Chateo/core/utils/strings.dart';
 
 class MoreItemsModel {
   final String title;

@@ -1,8 +1,8 @@
-import 'package:chateo_app/core/cache/cache_helper.dart';
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/services/service_locator.dart';
-import 'package:chateo_app/core/utils/assets.dart';
-import 'package:chateo_app/core/utils/colors.dart';
+import 'package:Chateo/core/cache/cache_helper.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/services/service_locator.dart';
+import 'package:Chateo/core/utils/assets.dart';
+import 'package:Chateo/core/utils/colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

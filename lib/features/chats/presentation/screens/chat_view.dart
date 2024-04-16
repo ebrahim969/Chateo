@@ -1,7 +1,7 @@
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/utils/colors.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/chats/presentation/sections/chat_view_body.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/utils/colors.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/chats/presentation/sections/chat_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ChatView extends StatelessWidget {

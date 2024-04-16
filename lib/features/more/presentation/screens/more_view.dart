@@ -1,9 +1,9 @@
-import 'package:chateo_app/core/functions/custom_toast.dart';
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/more/logic/cubit/more_cubit.dart';
-import 'package:chateo_app/features/more/presentation/sections/more_view_body.dart';
+import 'package:Chateo/core/functions/custom_toast.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/more/logic/cubit/more_cubit.dart';
+import 'package:Chateo/features/more/presentation/sections/more_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quickalert/models/quickalert_type.dart';
@@ -43,21 +43,18 @@ class MoreView extends StatelessWidget {
                           showCancelBtn: true,
                           context: context,
                           type: QuickAlertType.warning,
-                          text: 'You make sure to delete your account?',
                           confirmBtnText: 'Sign out',
-                          cancelBtnText: 'Delete account',
                           onConfirmBtnTap: () {
-                            cubit.deleteUser();
+                            cubit.signOut();
                           },
                           onCancelBtnTap: () {
-                            cubit.signOut();
+                            
                           },
                         );
                       },
-                      icon: Text(
-                        "Delete account",
-                        style:
-                            Styles.mulish600Size16.copyWith(color: Colors.red),
+                      icon: const Icon(
+                        Icons.logout_outlined,
+                        color: Colors.red,
                       ));
             },
           )

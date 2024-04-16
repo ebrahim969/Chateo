@@ -1,9 +1,9 @@
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/utils/assets.dart';
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/core/widgets/custom_btn.dart';
-import 'package:chateo_app/features/on_boarding/data/function/on_boarding_visited.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/utils/assets.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/core/widgets/custom_btn.dart';
+import 'package:Chateo/features/on_boarding/data/function/on_boarding_visited.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

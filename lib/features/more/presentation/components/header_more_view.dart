@@ -1,8 +1,8 @@
-import 'package:chateo_app/core/functions/custom_toast.dart';
-import 'package:chateo_app/core/utils/colors.dart';
-import 'package:chateo_app/core/utils/styles.dart';
-import 'package:chateo_app/features/more/logic/cubit/more_cubit.dart';
-import 'package:chateo_app/features/more/presentation/components/more_profile_avatar.dart';
+import 'package:Chateo/core/functions/custom_toast.dart';
+import 'package:Chateo/core/utils/colors.dart';
+import 'package:Chateo/core/utils/styles.dart';
+import 'package:Chateo/features/more/logic/cubit/more_cubit.dart';
+import 'package:Chateo/features/more/presentation/components/more_profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,6 +1,6 @@
-import 'package:chateo_app/features/contacts/logic/contacts/contacts_cubit.dart';
-import 'package:chateo_app/features/contacts/presentation/components/custom_contact_list_item.dart';
-import 'package:chateo_app/features/contacts/presentation/components/default_contact_list_item.dart';
+import 'package:Chateo/features/contacts/logic/contacts/contacts_cubit.dart';
+import 'package:Chateo/features/contacts/presentation/components/custom_contact_list_item.dart';
+import 'package:Chateo/features/contacts/presentation/components/default_contact_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

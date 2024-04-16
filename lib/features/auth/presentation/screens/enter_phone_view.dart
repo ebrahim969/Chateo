@@ -1,4 +1,4 @@
-import 'package:chateo_app/features/auth/presentation/sections/enter_phone_view_body.dart';
+import 'package:Chateo/features/auth/presentation/sections/enter_phone_view_body.dart';
 import 'package:flutter/material.dart';
 
 class EnterPhoneView extends StatelessWidget {

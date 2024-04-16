@@ -1,8 +1,8 @@
 // ignore_for_file: depend_on_referenced_packages, avoid_function_literals_in_foreach_calls
 
 import 'package:bloc/bloc.dart';
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/features/contacts/data/model/contact_model.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/features/contacts/data/model/contact_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';

@@ -1,6 +1,6 @@
-import 'package:chateo_app/core/functions/custom_toast.dart';
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
+import 'package:Chateo/core/functions/custom_toast.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/features/auth/logic/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';

@@ -1,10 +1,10 @@
-import 'package:chateo_app/core/functions/custom_toast.dart';
-import 'package:chateo_app/core/functions/navigation.dart';
-import 'package:chateo_app/core/utils/strings.dart';
-import 'package:chateo_app/core/widgets/custom_btn.dart';
-import 'package:chateo_app/features/auth/logic/cubit/auth_cubit.dart';
-import 'package:chateo_app/features/auth/presentation/components/country_code_widget.dart';
-import 'package:chateo_app/features/auth/presentation/components/custom_txt_feild.dart';
+import 'package:Chateo/core/functions/custom_toast.dart';
+import 'package:Chateo/core/functions/navigation.dart';
+import 'package:Chateo/core/utils/strings.dart';
+import 'package:Chateo/core/widgets/custom_btn.dart';
+import 'package:Chateo/features/auth/logic/cubit/auth_cubit.dart';
+import 'package:Chateo/features/auth/presentation/components/country_code_widget.dart';
+import 'package:Chateo/features/auth/presentation/components/custom_txt_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -6,3 +6,9 @@ created during the first use of the application.
 
 ## Uses:
 
+* Bloc Design Pattern
+* Firebase Auth 
+* Cloud Firestore 
+* Storage 
+* Shared preference 
+* Cubit as aState Management
